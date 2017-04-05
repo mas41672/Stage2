@@ -2,7 +2,7 @@
 gameDifficulty = raw_input('''\n\nPlease select a game difficulty by typing it in!
 Possible choices include easy, medium, and hard.\n''')
 print "You've chosen "+ gameDifficulty +'!'
-print '\nYou will get 5 guesses per problem '
+
 
 
 if (gameDifficulty == 'easy'):
@@ -69,10 +69,12 @@ def myTextStatusPrint(sample):
 	# output: string with the "big" text
 	return '\nThe current paragraph reads as such:\n' + sample
 
+maxGuesses = raw_input('''\nHow many guesses do you like for each guess?\n''')
+maxGuesses = int(maxGuesses)
 
+#loop
 win = False
-forceOutOfOuterloop = False # change to False when guessing wrong 5 times
-maxGuesses = 5
+forceOutOfOuterloop = False # change to False when guessing wrong 5 timess
 blankIndex = 0
 while( blanks_in_text(sample, blanksList) and not forceOutOfOuterloop  ): #blanks_in_text(sample, blanksList) 
 	print myTextStatusPrint(sample)
