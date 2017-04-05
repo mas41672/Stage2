@@ -72,12 +72,12 @@ def myTextStatusPrint(sample):
 maxGuesses = raw_input('''\nHow many guesses do you like for each guess?\n''')
 maxGuesses = int(maxGuesses)
 
-#loop
+#loop ***
 win = False
 forceOutOfOuterloop = False # change to False when guessing wrong 5 timess
 blankIndex = 0
 while( blanks_in_text(sample, blanksList) and not forceOutOfOuterloop  ): #blanks_in_text(sample, blanksList) 
-	print myTextStatusPrint(sample)
+	print myTextStatu
 	guesses_left = maxGuesses   # reinitilize masGuesses for each new blank
 	while( 0 < guesses_left ):
 		if(guesses_left != maxGuesses):
@@ -99,6 +99,8 @@ while( blanks_in_text(sample, blanksList) and not forceOutOfOuterloop  ): #blank
 	if ( (len(blanksList)-1) == blankIndex ): # went/guessed through blank all cases
 		win = True
 	blankIndex += 1
+
+# prints the result
 
 if (win):
 	print "\nYou won!\n"
