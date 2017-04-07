@@ -85,6 +85,8 @@ while( blanks_in_text(sample, blanksList) and not forceOutOfOuterloop  ): #blank
 		input_prompt = raw_input('\nWhat should be substituted in for'+ blanksList[blankIndex] +'? ')
 		if ( input_prompt == answers[blankIndex] ): # correct guess
 			sample = sample.replace(blanksList[blankIndex], answers[blankIndex])
+			if (blankIndex ==  len(blanksList)-1 ):
+				print myTextStatusPrint(sample)	
 			print 'Correct !'
 			break # jumps out of: while( 0 < guesses_left ):
 		else:                                       # faild guess
