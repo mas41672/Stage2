@@ -1,7 +1,7 @@
 # guess Vocabulary game
 gameDifficulty = raw_input('''\n\nPlease select a game difficulty by typing it in!
 Possible choices include easy, medium, and hard.\n''')
-print "You've chosen "+ gameDifficulty +'!'
+
 
 
 
@@ -27,6 +27,7 @@ tuple, and ___4___ or can be more complicated such as objects and lambda functio
 	blanksList = ['___1___','___2___','___3___','___4___'] 
 	answers = ['function','arguments','none','list']
 else:
+	gameDifficulty = 'hard'
 	sample = '''When you create a __1__, certain __2__s are automatically
 generated for you if you don't make them manually. These contain multiple
 underscores before and after the word defining them.  When you write
@@ -41,6 +42,8 @@ __9__, and __10__ allow __4__s of the __1__ to be compared
 (with <, >, and ==).'''
 	blanksList = ['__1__','__2__','__3__','__4__','__5__','__6__','__7__','__8__','__9__','__10__']
 	answers = ['class','method','__init__','instance','__repr__','__add__','__sub__','__lt__','__gt__','__eq__']
+
+print "You've chosen "+ gameDifficulty +'!'
 
 def word_in_pos(word, listOfBlanks):
 	#searches for blank of listOfBlanks in word
